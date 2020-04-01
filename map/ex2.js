@@ -27,7 +27,7 @@ Sample foods array, i.e. INPUT:
       isVegetarian: true
     },
     {
-      food: 'Chick Pea',
+      food: 'Chick Pea',8
       isVegetarian: true
     }
   ]
@@ -43,9 +43,31 @@ Expected OUTPUT for this sample
 */
 
 function getFoodCategories(foods) {
+  const goVegetarian = foods.map(element => `${element.food}` + (element.isVegetarian
+
+  ? "is suitable for vegetrarian"
+  : "is not suitable")
+
+  return goVegetarian;
 }
-
-
+getFoodCategories([
+  {
+    food: "Bacon",
+    isVegetarian: false
+  },
+  {
+    food: "Sausage",
+    isVegetarian: false
+  },
+  {
+    food: "Tofu",
+    isVegetarian: true
+  },
+  {
+    food: "Chick Pea",
+    isVegetarian: true
+  }
+]);
 
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;
