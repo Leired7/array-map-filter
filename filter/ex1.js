@@ -14,12 +14,27 @@ Expected OUTPUT for this sample:
 */
 
 function getPositiveNumbers(numbers) {
+<<<<<<< HEAD
   return numbers.filter((element) => (
     element > 0
   ))
+||||||| merged common ancestors
+=======
+  const positiveNumbers = numbers.filter(
+    element => element > 0 || element == 0
+  );
+  console.log(positiveNumbers);
+  return positiveNumbers;
+>>>>>>> 2670b2afa645ff1798cf69ee1f99e509b5634a3e
 }
 
+<<<<<<< HEAD
 
+||||||| merged common ancestors
+=======
+getPositiveNumbers([7, -4, 2, 0, -10, 3, 11]);
+
+>>>>>>> 2670b2afa645ff1798cf69ee1f99e509b5634a3e
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own
 // console.log INSIDE the function).
