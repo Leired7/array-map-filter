@@ -26,8 +26,7 @@ Expected OUTPUT for this sample array:
 
 */
 
-function getStringsLength(strings) {
-}
+function getStringsLength(strings) {}
 
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own
