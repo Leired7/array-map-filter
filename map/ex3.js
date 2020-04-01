@@ -83,12 +83,16 @@ const moviesArray = [
 
 function getMoviesFreshness(movies) {
   const putLabel = movies.map( (element) => 
-    element.rating < 60
-    ? element.label = "rotten"
-    : console.log(element.label))
+        
+        element.label ="2"
+        
+         
     
-    console.log(putLabel)
-    return putLabel;
+      
+
+    )
+
+    return console.log('putlabel',putLabel);
 }
 
 getMoviesFreshness(moviesArray)
