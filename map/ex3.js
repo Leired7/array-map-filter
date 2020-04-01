@@ -63,40 +63,37 @@ Expected OUTPUT for this sample:
 
 const moviesArray = [
   {
-    name: 'Crazy Rich Asians',
+    name: "Crazy Rich Asians",
     rating: 93
   },
   {
-    name: 'Skyscraper',
+    name: "Skyscraper",
     rating: 46
   },
   {
-    name: 'Leave No Trace',
+    name: "Leave No Trace",
     rating: 100
   },
   {
-    name: 'White Boy Rick',
+    name: "White Boy Rick",
     rating: 60
   }
-]
-
+];
 
 function getMoviesFreshness(movies) {
-  const putLabel = movies.map( (element) => 
-        
-        element.label ="2"
-        
-         
-    
-      
-
-    )
-
-    return console.log('putlabel',putLabel);
+  return movies.map(movie => {
+    if (movie.rating < 60) {
+      movie.label = "rotten";
+    } else if (movie.rating >= 60 && movie.rating <= 75) {
+      movie.label = "fresh";
+    } else {
+      movie.label = "certified fresh";
+    }
+    return movie;
+  });
 }
 
-getMoviesFreshness(moviesArray)
-
+getMoviesFreshness(moviesArray);
 
 // DON'T TOUCH THIS!
 module.exports = getMoviesFreshness;
