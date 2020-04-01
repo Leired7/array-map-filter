@@ -43,12 +43,9 @@ Expected OUTPUT for this sample
 */
 
 function getFoodCategories(foods) {
-  const goVegetarian = foods.map(element => `${element.food}` + (element.isVegetarian
-
-  ? "is suitable for vegetrarian"
-  : "is not suitable")
-
-  return goVegetarian;
+  const goVegetarian = foods.map(element => element.isVegetarian ? `${element.food} is suitable for vegetarians` : `${element.food} is not suitable for vegetarians` )
+  
+    return goVegetarian;
 }
 getFoodCategories([
   {
