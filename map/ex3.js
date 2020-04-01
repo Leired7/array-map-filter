@@ -61,9 +61,37 @@ Expected OUTPUT for this sample:
 
  */
 
+const moviesArray = [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+]
+
+
 function getMoviesFreshness(movies) {
+  const putLabel = movies.map( (element) => 
+    element.rating < 60
+    ? element.label = "rotten"
+    : console.log(element.label))
+    
+    console.log(putLabel)
+    return putLabel;
 }
 
+getMoviesFreshness(moviesArray)
 
 
 // DON'T TOUCH THIS!
